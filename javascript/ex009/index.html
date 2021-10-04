@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço de Produtos</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            background-color: darkgray;
+            /* background-image: carrega a imagem*/
+            background-image: url("mercado.jpg");
+            /* background-position: coloca a imagem no centro*/
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header, section{
+            background-color: white;
+            /*max-width:serve para dar uma largura máxima ao site*/
+            max-width: 600px;
+            padding: 10px;
+            margin: auto;
+            /* margin-bottom: serve para dar espaço em baixo*/
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.555);
+        }
+        input[type=submit]{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Supermercado
+        </h1>
+        <p>
+            Nosso supermecado está no mês de aniversário e todos os produtos vão ganhar 10% de desconto. Preencha o formulário a seguir com os dados do produto e o preço atual. O sistema vai calcular o novo preço para o produto.
+        </p>
+    </header>
+    <section id="formulario">
+        <h2>
+            Sobre os produtos
+        </h2>
+        <form action="mercado.php" onsubmit="return reajuste()">
+        <label for="produto"> Nome de Produto:</label>
+        <input type="text" name="produto" id="produto">
+        <br>
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco" id="preco" min="1" max="10000" value="0" step="0.05">
+        <br>
+        <input type="submit" value="Calcular">
+
+        </form>
+    </section>
+    <section id="resultado">
+        <h2>
+            Resultados
+        </h2>
+        <p id="saida">
+            O resultado vai aparecer aqui.
+        </p>
+    </section>
+    <script>
+        // Esta area executará sempre que a página for carregada
+        document.getElementById('resultado').style.visibility = "hidden"
+        // Esta função só executará quando clicarmos no botão submit
+        function reajuste(){
+            let nome = document.getElementById('produto').value
+            let pre = Number(document.getElementById("preco").value)
+            let dezporc = (pre * 10)/100
+            let novopre = pre - dezporc
+
+            let saida = document.getElementById("saida")
+            saida.innerHTML = `O produto ${nome} vai custar R$${novopre} na promoção de aniversário `
+            document.getElementById('resultado').style.visibility = "visible"
+            return false
+        }
+    </script>
+</body>
+</html>
