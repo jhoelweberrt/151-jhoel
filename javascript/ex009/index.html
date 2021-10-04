@@ -5,37 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preço de Produtos</title>
-    <style>
-        body{
-            font-family:Verdana, Geneva, Tahoma, sans-serif ;
-            background-color: darkgray;
-            /* background-image: carrega a imagem*/
-            background-image: url("mercado.jpg");
-            /* background-position: coloca a imagem no centro*/
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        header, section{
-            background-color: white;
-            /*max-width:serve para dar uma largura máxima ao site*/
-            max-width: 600px;
-            padding: 10px;
-            margin: auto;
-            /* margin-bottom: serve para dar espaço em baixo*/
-            margin-bottom: 10px;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.555);
-        }
-        input[type=submit]{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: gray;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -69,21 +39,6 @@
             O resultado vai aparecer aqui.
         </p>
     </section>
-    <script>
-        // Esta area executará sempre que a página for carregada
-        document.getElementById('resultado').style.visibility = "hidden"
-        // Esta função só executará quando clicarmos no botão submit
-        function reajuste(){
-            let nome = document.getElementById('produto').value
-            let pre = Number(document.getElementById("preco").value)
-            let dezporc = (pre * 10)/100
-            let novopre = pre - dezporc
-
-            let saida = document.getElementById("saida")
-            saida.innerHTML = `O produto ${nome} vai custar R$${novopre} na promoção de aniversário `
-            document.getElementById('resultado').style.visibility = "visible"
-            return false
-        }
-    </script>
+    <script src="mercado.js"></script>
 </body>
 </html>
