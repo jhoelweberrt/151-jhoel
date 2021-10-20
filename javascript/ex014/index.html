@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo para </title>
+    <title>Calculo para Pintar Parede </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <h1>
+            Calculo para pintar Parede
+        </h1>
+        <p>
+            Coloque a seguir as dimensões da parede e eu vou calcular quantos litros de tinta você precisar comprar, sabendo que cada litro consegue cobrir uma área de 2m2.
+        </p>
+        <form action="salvar.php" method="get" onsubmit="return calc()">
+        <label for="largura">Largura:</label>
+        <input type="number" name="n1" id="n1" min="1" max="250" step="1" value="1" ><br>
+        <label for="altura">Altura:</label>
+        <input type="number" name="n2" id="n2" min="1" max="250" step="1" value="1"><br>
+        <input type="submit" value="Calcular">        
+    </form>
+    </main>
+    <section id="resultado">
+        <h2>
+            Calculo da Tinta
+        </h2>
+        <p id="frase">Valor da Tinta...</p>
+        <button onclick="fechar()">Fechar</button>
+    </section>
+    <script src="calc.js"></script>
 </body>
 </html>
