@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(156, 93, 93);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main,section{
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.452);
+}
+input[type = submit]{
+    background-color: gray;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+input[type = submit]:hover{
+    cursor: pointer;
+}
+button{
+    background-color: gray;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
