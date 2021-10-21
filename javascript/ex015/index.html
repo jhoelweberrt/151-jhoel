@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumento de Sálario</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Reajuste Salarial
+        </h1>
+        <form action="salvar.php" method="get" onsubmit="return salario()">
+        <label for="funcionario">Nome do Funcionário:</label>
+        <input type="text" name="nome" id="nome"><br>
+        <label for="salario">Salário:</label>
+        <input type="number" name="n" id="n" min="0" max="25000" step="0.01" value="1100"><br>
+        <label for="reajuste">Reajuste</label>
+        <select name="opcoes" id="aument">
+            <option value="5-porc">5% de aumento</option>
+            <option value="10-porc">10% de aumento</option>
+            <option value="15-porc">15% de aumento</option>
+        </select><br>
+        <input type="submit" value="Valor do Reajuste">
+        </form>
+    </main>
+    <section id="resultado">
+        <h2>
+            Seu novo Salário
+        </h2>
+        <p id="frase">Novo Salário</p>
+        <button onclick="fechar()">Fechar</button>
+    </section>
+    <script src="salar.js"></script>
+</body>
+</html>
