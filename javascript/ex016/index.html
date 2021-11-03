@@ -8,14 +8,14 @@
 </head>
 <body>
     <main>
-        <section id="entrada">
+       
             <h1>
                 Pare de Fumar!
             </h1>
             <p>
                 Cigarro MATA! Segundo uma pesquisa, cada cigarro fumado reduz 10 min de vida de um ser humano. Vamos fazer a conta?
             </p>
-            <form action="salvar.php" method="get" onsubmit="return fumante()">
+            <form action="salvar.php" method="get" onsubmit="return fumar()">
                 <label for="qfpd">Quantos Cigarros fuma por dia?</label>
                 <input type="number" name="n1" id="n1" min="0" max="50" value="1">
                 <br>
@@ -23,9 +23,8 @@
                 <input type="number" name="n2" id="n2" min="0" max="50" value="1">
                 <br>
                 <input type="submit" value="Calcular">
-            
-        </main>
-        </section>
+            </form>
+     </main>
     <section id="resultado">
         <h2>
             Calculo da Morte

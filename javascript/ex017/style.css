@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(0, 72, 206);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: white;
+    text-shadow: 2px 0px 2px black;
+    text-align: center;
+}
+main{
+    background-color: white;
+    width: 500px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.295);
+}
+#saida{
+    background-color: white;
+    width: 500px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.295);
+}

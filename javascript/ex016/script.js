@@ -1,7 +1,11 @@
 let frase = document.getElementById('frase')
 let res = document.getElementById('resultado')
 
-function fumante(){
+function fechar(){
+    res.style.visibility = "hidden"
+}
+
+function fumar(){
     let n1 = Number(document.getElementById('n1').value)
     let n2 = Number(document.getElementById('n2').value)
 
@@ -9,6 +13,8 @@ function fumante(){
     let horas = min/60
     let dias = horas/24
 
-    frase.innerHTML = `Uma pessoa que fuma ${n1} cigarros por dia, há ${n2} anos já perdeu <strong> ${horas.toFixed(1)} horas de vida</strong> Isso corresponde a ${dias.toFixed(1)} dias a menos. `
+    res.style.visibility = "visible"
 
+    frase.innerHTML = `Uma pessoa que fuma ${n1} cigarros por dia, há ${n2} anos já perdeu <strong> ${horas.toFixed(1)} horas de vida</strong> Isso corresponde a ${dias.toFixed(1)} dias a menos. `
+return false
 }

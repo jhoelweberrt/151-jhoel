@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 017  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+        <h1>
+            Quem pode votar no Brasil?
+        </h1>
+       <main>
+        <p>
+            No Brasil, o cidadão tem direito a voto se tem 16 anos ou mais(opcional ou obrigatório, dependendo da faixa etária).
+        </p>
+        <form action="salvar.php" method="get" onsubmit="return verfica()">
+        <label for="nascimento">Em que ano você Nasceu?</label>
+        <input type="number" name="ano" id="ano" min="1900" max="2021" step="1" value="2000">
+        <input type="submit" value="Verificar">
+        </form>
+    
+       </main>
+    <p id="saida">
+        Você pode votar sim ou não?
+    </p>
+    <script>
+
+        let saida = document.getElementById('saida')
+
+         function verfica(){
+             
+            let calend = new Date()
+            let hoje = calend.getFullYear()
+            let ano = Number(document.getElementById("ano").value)
+            let idade = hoje - ano
+
+            saida.innerHTML = `Quem nasce em ${ano} fará <strong>${idade} anos em ${hoje}</strong>  `
+
+            if (idade >= 16){
+                saida.innerHTML += `Com essa idade, o cidadão <strong>TEM DIREITO A VOTO</strong>`
+            } else{
+                saida.innerHTML += `Com essa idade, o cidadão <strong> AINDA NÃO PODE VOTAR</strong>`
+            }
+            
+            
+            
+            
+            
+            
+            
+            return false
+         }
+    </script>
+</body>
+</html>
