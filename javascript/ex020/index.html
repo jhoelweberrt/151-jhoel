@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 020</title>
+</head>
+<body>
+    <h1>
+        Contando de 5 em 5 números
+    </h1>
+    <p>
+        Vamos contar de 5 em 5 números
+    </p>
+    <button onclick="contar()">Começo de Contagem</button>
+    <p id="numeros">A contagem irá aparecer aqui</p>
+    <script>
+        function contar(){
+            let num = document.getElementById('numeros')
+            let n = 0
+            num.innerHTML = ``
+            while(n<=100){
+               num.innerHTML +=`${n} `
+               n+=5 
+            }
+        }
+    </script>
+</body>
+</html>

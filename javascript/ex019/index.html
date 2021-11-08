@@ -19,9 +19,9 @@
            let fim = Number(prompt('Onde vai terminar a contagem'))
         
             let num = document.getElementById("numeros")
-            let n = 10
+            let n = começo
             num.innerHTML = ``
-            while (n>=0){
+            while (n <= fim){
                 num.innerHTML +=`${n} `
                 n++
             }
