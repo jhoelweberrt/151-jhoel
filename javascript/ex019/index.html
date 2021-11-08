@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>EX 019</title>
+</head>
+<body>
+    <h1>
+        Contando de 1 até 100
+    </h1>
+    <button onclick="contar()">Aperte Aqui</button>
+    <p id="numeros">A contagem vai aparecer aqui</p>
+    <script>
+        function contar(){
+           let começo = window.prompt("Onde vou começar a contagem?")
+           let fim = window.prompt("Onde vou terminar a contagem?")
+        
+            let num = document.getElementById("numeros")
+            let n = 10
+            num.innerHTML = ``
+            while (n >= 0){
+                num.innerHTML +=`${n} `
+                n++
+            }
+            num.innerHTML +=` FIM`
+        }
+       
+    </script>
+</body>
+</html>
