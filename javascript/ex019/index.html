@@ -15,13 +15,13 @@
     <p id="numeros">A contagem vai aparecer aqui</p>
     <script>
         function contar(){
-           let começo = window.prompt("Onde vou começar a contagem?")
-           let fim = window.prompt("Onde vou terminar a contagem?")
+           let começo = Number(prompt('Onde vou começar a contagem'))
+           let fim = Number(prompt('Onde vai terminar a contagem'))
         
             let num = document.getElementById("numeros")
             let n = 10
             num.innerHTML = ``
-            while (n >= 0){
+            while (n>=0){
                 num.innerHTML +=`${n} `
                 n++
             }
