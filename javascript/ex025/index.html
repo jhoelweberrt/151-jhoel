@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 025</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Tente me vencer &#x1F914;
+        </h1>
+        <p>
+            Aqui quem fala é o seu computador e eu acabei de pensar em um número mágico entre 1 e 50. Vou te dar 10 chances para tentar adivinhar!
+        </p>
+        <form action="salvar.php" method="get" onsubmit="return jogada()">
+        <label for="palpite" id="frase">Tentativa 1:</label>
+        <input type="number" name="name" id="palpite" min="1" max="50">
+        <input type="submit" value="Palpite" id="btnjogar">
+        <input type="reset" value="Recomeçar">
+        </form>
+        <section id="saida">
+            <h2>
+                Resposta do computador &#x1F4BB;
+            </h2>
+            <p id="resposta">
+                Aqui eu vou te dando maiores instruções...
+            </p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
