@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 026</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Gerador de Tabuadas
+        </h1>
+        <form action="salvar.php" method="get" onsubmit="return tabuada()">
+        <label for="t">
+            Mostrar tabuada do número
+        </label>
+        <input type="number" name="num" id="num" min="1" max="100" value="5" >
+        <input type="submit" value="Mostrar Tabuada">
+        </form>
+    </main>
+    <section id="saida">
+        <h2 id="titulo">Tabuada</h2>
+        <p id="mensagem">Tabuada </p>
+    </section>
+    <script>
+        let t = document.getElementById("titulo")
+        let m = document.getElementById("mensagem")
+
+        function tabuada(){
+            let n = Number(document.getElementById("num").value)
+            t.innerHTML = `Tabuada do número ${n}`
+            m.innerHTML = ``
+
+            let c = 1
+            while (c <=10){
+                m.innerHTML += `${n} x ${c} = <strong> ${n * c}</strong> <br>`
+                c ++
+            }
+            return false
+        }
+    </script>
+</body>
+</html>
