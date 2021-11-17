@@ -8,7 +8,42 @@
 </head>
 <body>
     <main>
-        
+        <h1>
+            Leitura de Número Válido
+        </h1>
+        <p>
+            O número só será aceito se estiver entre 0 e 10. Experimente deixar a caixa vazia, digitar letras ou um número fora do limite.
+        </p>
+        <button onclick="iniciar()">Iniciar</button>
     </main>
+    <section id="resultado">
+        <h2>
+            Resultado
+        </h2>
+        <p id="results">
+            O resultado vai aparecer aqui
+        </p>
+    </section>
+    <script>
+        let res = document.getElementById("results")
+        function iniciar(){
+            let num, valor
+            do{
+                num = prompt("Digite um valor de 0 a 10 ").trim()
+                valor == Number(num)
+                if(num === ""){
+                    alert("Você não pode deixar a caixa em branco")
+                } else if (isNaN(num)){
+                    alert("Você precisa digitar um número, não um texto")
+                } else if (valor < 0 || valor > 10){
+                    alert("O número precisa estar entre 0 e 10")
+                } else if (valor >= 0 && valor <= 10){
+                    //Deu certo, seguiu as regras
+                    break
+                } while (true) // Looping infinito, só um break pode quebrar a repetição
+                res.innerHTML = `O valor ${valor} foi registrado com sucesso.`
+        }
+     }
+    </script>
 </body>
 </html>
