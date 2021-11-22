@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 032</title>
+</head>
+<body>
+    <main>
+        <h1>
+            As 4 operações
+        </h1>
+        <p>
+            Informe dois números e escolha qual das quatro operações aritméticas vai ser executada com eles.
+        </p>
+        <form action="salvar.php" onsubmit="return operar()">
+        <label for="v1">Valor 1 </label>
+        <input type="number" name="v1" id="v1" min="0" max="10" value="0" step="1">
+        <br>
+        <label for="v2">Valor 2</label>
+        <input type="number" name="v2" id="v2" min="0" max="10" value="0" step="1">
+            <br>
+        <label for="opc">Qual é a operação?</label>
+        <input type="number" name="opc" id="opc" min="1" max="4" step="1"><br>
+        <input type="submit" value="Calcular">
+
+        </form>
+    </main>
+    <section id="saida">
+        <h2 id="titulo">
+            O resultado irá aparecer aqui
+        </h2>
+        <p id="frase">
+            A resposta vai aparecer aqui
+        </p>
+        <button onclick="fechar()">Fechar</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
