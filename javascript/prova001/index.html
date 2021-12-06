@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVA 001</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Exercicio 01
+        </h1>
+        <p>
+            Crie em HTML um formulário que solicite o nome e o ano de nascimento de uma pessoa:
+        </p>
+        <form action="salvar.php" method="get" onsubmit="return idade()">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" maxlength="25" placeholder="Apenas o primeiro nome">
+        <br>
+        <label for="ano-nascimento">Ano de Nascimento:</label>
+        <input type="number" name="nasc" id="nasc" min="1900" max="2003" step="1" value="2003">
+        <br>
+        <input type="submit" value="Calcular">
+        </form>
+    </main>
+    <section id="resultado">
+      <p id="frase">Idade atual da pessoa</p>
+      <p id="frase2">Em que ano a pessoa completou 18 anos.</p>
+      <p id="frase3">Em que ano a pessoa fará o dobro da idade</p>
+    </section>
+    <script>
+        let res = document.getElementById("resultado")
+        let frase = document.getElementById("frase")
+        let frase2 = document.getElementById("frase2")
+        let frase3 = document.getElementById("frase3")
+
+        function idade(){
+            let calend = new Date()
+            let ano = calend.getFullYear()
+            let nome = document.getElementById("nome").value 
+            let nasc = Number(document.getElementById("nasc").value)
+            let idade = ano - nasc
+            let f2 = nasc + 18
+            let f3  = 
+
+
+            frase.innerHTML = `${nome} tem ${idade} anos.`
+            frase2.innerHTML = `${nome} fez 18 anos em ${f2}.`
+            frase3.innerHTML = `${nome} irá ter o dobro da idade em ${f3}`
+
+
+
+
+
+
+            return false
+
+        }
+
+    </script>
+</body>
+</html>

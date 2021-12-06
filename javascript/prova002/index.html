@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 002</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Exercicio 02
+        </h1>
+        <p>
+            Crie o seguinte Formulário:
+        </p>
+        <form action="salvar.php" method="get" onsubmit="return calcular()">
+        <label for="valor1">Valor 1:</label>
+        <input type="number" name="n1" id="n1" min="0" max="100" value="1" step="1" ><br>
+        <label for="valor2">Valor 2:</label>
+        <input type="number" name="n1" id="n2" min="0" max="100" value="1" step="1">
+        <br>
+        <input type="submit" value="Verificar">
+        </form>
+    </main>
+    <section id="saida">
+        <p id="frase">Soma entre os valores</p>
+        <p id="frase2">O valor é par?</p>
+        <p id="frase3">O valor 2 é multiplo de 5?</p>
+        <p id="frase4">Qual dos dois é maior?</p>
+    </section>
+    <script>
+        let saida = document.getElementById("saida")
+        let frase = document.getElementById("frase")
+        let frase2 = document.getElementById("frase2")
+        let frase3 = document.getElementById("frase3")
+        let frase4 = document.getElementById("frase4")
+
+
+    function calcular(){
+        let n1 = Number(document.getElementById("n1").value)
+        let n2 = Number(document.getElementById("n2").value)
+
+        let f = n1 + n2
+        frase.innerHTML = `A soma entre os valores é ${f}`
+        frase2.innerHTML = `O valor 1 é par?`
+        if(n1 % 2 == 0){
+            frase2.innerHTML = `SIM`
+        }else{
+            frase.innerHTML = `NÃO`
+        }
+       frase3.innerHTML = `O valor 2 é multiplo de 5?`
+       if(n2 % 5 ==0){
+           frase3.innerHTML = `Sim`
+       }else{
+           frase3.innerHTML = `Não`
+       }
+
+       frase4.innerHTML = `Qual dos números é maior?`
+       if(n1 > n2){
+           frase4.innerHTML = `O valor 1 é maior`
+       }else(n2 > n1)
+        frase4.innerHTML = `O valor 2 é maior`
+       
+           
+        return false
+    }
+    </script>
+</body>
+</html>
